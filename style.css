@@ -1,6 +1,44 @@
 body {
   background-color: #9356DC;
   color: aqua;
+  font-size: 16px;
+  font-family: Roboto;
+}
+
+.container {
+  width: 100%;
+  padding: 5px;
+  display: flex;
+  flex-direction: column;
+}
+
+div {
+  display: block;
+}
+div img {
+  width: 200px;
+  height: 150px;
+  object-fit: cover;
+}
+
+h1 {
+  font-size: 1.5em;
+}
+
+h2 {
+  font-size: 1em;
+  font-weight: 700;
+}
+
+h4 {
+  font-family: Shrikhand;
+}
+
+button {
+  background-color: #FF79DA;
+  cursor: pointer;
+  padding: 20px;
+  border-radius: 20%;
 }
 
 /*# sourceMappingURL=style.css.map */
