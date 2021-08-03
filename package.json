@@ -1,0 +1,19 @@
+{
+"name": "ohmyfood",
+"version": "1.0.0",
+"description": "projet 3 OC",
+"main": "index.js",
+"scripts": {
+"sass": "sass --watch ./sass/main.scss:./style.css"
+},
+"repository": {
+"type": "git",
+"url": "git+https://github.com/MarieKppo/MarieCappeau_3_01072021.git"
+},
+"author": "",
+"license": "ISC",
+"bugs": {
+"url": "https://github.com/MarieKppo/MarieCappeau_3_01072021/issues"
+},
+"homepage": "https://github.com/MarieKppo/MarieCappeau_3_01072021#readme"
+}
