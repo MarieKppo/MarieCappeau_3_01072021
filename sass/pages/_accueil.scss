@@ -1,0 +1,24 @@
+#exploration {
+    background-color:$background;
+}
+.fa-map-marker-alt{
+    margin: 1em;
+}
+.geoloc {
+    justify-content: center;
+    align-items: center;
+    background-color: darken($color:$background, $amount: 0.4);
+    p {
+        font-weight: 600;
+        font-size: 1em;
+    }
+}
+.exploTitle {
+    flex-direction: column;
+    justify-content: space-around;
+    align-items: center;
+    margin: 2em 2em;
+    h1, p {
+        text-align: center;
+    }
+}
