@@ -6,16 +6,10 @@ body {
     width: 100%;
     padding: 5px;
     display: flex;
+    /*ajout media querie*/
     flex-direction: column;
 }
-div {
-    display: block;
-    img {
-        width: 200px;
-        height: 150px;
-        object-fit: cover;
-    }
-}
+
 h1{
     font-size: 1.5em;
 }

@@ -1,11 +1,11 @@
 @import "./utils/variables.scss";
 @import "./base/typography.scss";
 
-@import "./layouts/header";
-@import "./layouts/footer";
+@import "./layouts/header.scss";
+@import "./layouts/footer.scss";
 
 
-@import "./components/btn";
+@import "./components/btn.scss";
 
 
-@import "./pages/accueil";
+@import "./pages/accueil.scss";
