@@ -32,6 +32,8 @@ h3 {
     margin-inline-end: 0px;
 }
 h4 {
+    font-size: 1.2em;
+    font-weight: 300;
     font-family: Shrikhand;
 }
 p {
@@ -45,4 +47,8 @@ p {
 }
 a {
     text-decoration: none;
+}
+ul {
+    list-style-type: none;
+    padding: 0em;
 }
