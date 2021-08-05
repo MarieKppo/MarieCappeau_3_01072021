@@ -27,11 +27,12 @@
     }
 }
 #operationMode {
-    margin: 1em 2em;
+    margin: 2em;
 }
 .opeGrid {
     @include grid;
     grid-template-rows: repeat(3, 1fr);
+    margin: 1em;
 }
 .opeCard {
     flex-direction: row;    
@@ -52,7 +53,7 @@
         background-color: $primary-color;
         border-radius: 50%;
         position: absolute;
-        left: 1em;
+        left: 2em;
     }
     .fas{
         color: $shadowco;
@@ -69,10 +70,12 @@
 }
 #restaurants {
     background-color: $background;
+    padding: 3em 0em;
 }
 .restoContainer {
     flex-direction: column;
-    margin: 1em;
+    justify-content: stretch;
+    margin: 0em 2em;
 }
 .menuGrid {
     @include grid;
