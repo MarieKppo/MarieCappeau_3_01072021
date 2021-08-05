@@ -26,18 +26,30 @@ h2 {
   font-weight: 700;
 }
 
+h3 {
+  font-size: 1em;
+  margin-block-start: 0em;
+  margin-block-end: 0em;
+  margin-inline-start: 0px;
+  margin-inline-end: 0px;
+}
+
 h4 {
   font-family: Shrikhand;
 }
 
 p {
   display: block;
-  font-size: 1.1em;
+  font-size: 1em;
   font-weight: 300;
-  margin-block-start: 1em;
-  margin-block-end: 1em;
+  margin-block-start: 0.5em;
+  margin-block-end: 0.5em;
   margin-inline-start: 0px;
   margin-inline-end: 0px;
+}
+
+a {
+  text-decoration: none;
 }
 
 .header {
@@ -67,6 +79,12 @@ img.logo {
   box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
 }
 
+.fa-heart {
+  color: black;
+  font-size: 1em;
+  font-weight: 300;
+}
+
 #exploration {
   background-color: rgba(0, 0, 0, 0.03);
 }
@@ -91,8 +109,12 @@ img.logo {
   align-items: center;
   margin: 2em 2em;
 }
-.exploTitle h1, .exploTitle p {
+.exploTitle h1 {
   text-align: center;
+}
+.exploTitle p {
+  text-align: center;
+  font-size: 1.1em;
 }
 
 #operationMode {
@@ -102,8 +124,8 @@ img.logo {
 .opeGrid {
   display: grid;
   grid-template-columns: 1fr;
-  grid-template-rows: repeat(3, 1fr);
   grid-row-gap: 2em;
+  grid-template-rows: repeat(3, 1fr);
 }
 
 .opeCard {
@@ -134,8 +156,55 @@ img.logo {
   font-weight: 800;
   padding: 0em 0.5em 0em 0.8em;
 }
+.opeCard .fa-store {
+  color: #9356DC;
+}
 .opeCard p {
   font: 600 0.9em Roboto;
+}
+
+#restaurants {
+  background-color: rgba(0, 0, 0, 0.03);
+}
+
+.restoContainer {
+  flex-direction: column;
+  margin: 1em;
+}
+
+.menuGrid {
+  display: grid;
+  grid-template-columns: 1fr;
+  grid-row-gap: 2em;
+  grid-template-rows: repeat(4, 1fr);
+}
+
+.menuLink {
+  border-radius: 1.5em;
+  margin: 0em;
+  width: 100%;
+  box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.5);
+}
+
+.menuCard {
+  flex-direction: column;
+  justify-content: stretch;
+}
+.menuCard--pic {
+  height: 15em;
+  border-radius: 1.5em 1.5em 0em 0em;
+  object-fit: cover;
+}
+.menuCard--info {
+  justify-content: space-between;
+}
+.menuCard--name {
+  flex-direction: column;
+  padding: 0.2em;
+}
+
+.fa-heart {
+  padding: 1.5em;
 }
 
 /*# sourceMappingURL=style.css.map */
