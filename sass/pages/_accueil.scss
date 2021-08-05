@@ -27,7 +27,7 @@
     }
 }
 #operationMode {
-    margin: 2em;
+    margin: 1.5em;
 }
 .opeGrid {
     @include grid;
@@ -50,7 +50,7 @@
         background-color: $primary-color;
         border-radius: 50%;
         position: absolute;
-        left: 2em;
+        left: 1.6em;
     }
     .fas{
         color: grey;
@@ -71,8 +71,7 @@
 }
 .restoContainer {
     flex-direction: column;
-    justify-content: stretch;
-    margin: 0em 2em;
+    margin: 0em 1.5em;
 }
 .menuGrid {
     @include grid;
@@ -86,20 +85,21 @@
 }
 .menuCard{
     flex-direction: column;
-    justify-content: stretch;
     &--pic {
-        height: 15em;
+        height: 10em;
         border-radius: 1.5em 1.5em 0em 0em;
         object-fit: cover;
     }
     &--info{
         justify-content: space-between;
+        background-color: $white;
+        border-radius: 0em 0em 1.5em 1.5em;
     }
     &--name{
         flex-direction: column;
-        padding: 0.2em;
+        padding: 0.8em;
     }
 }
 .fa-heart {
-    padding: 1.5em;
+    padding: 0.8em;
 }

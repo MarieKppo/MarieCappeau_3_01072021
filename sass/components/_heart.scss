@@ -1,6 +1,8 @@
 .fa-heart{
     color: black;
-    font-size: 1em;
+    font-size: 1.2em;
     font-weight: 300;
-    
+    &:hover{
+        background-color: linear-gradient(to bottom right,$secondary-color, $primary-color);
+    }
 }
