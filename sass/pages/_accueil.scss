@@ -78,7 +78,7 @@
     grid-template-rows: repeat(4, 1fr);
 }
 .menuLink{
-    border-radius: 1.5em;
+    border-radius: 1em;
     margin:0em;
     width: 100%;
     @include shadow;
@@ -86,14 +86,14 @@
 .menuCard{
     flex-direction: column;
     &--pic {
-        height: 10em;
-        border-radius: 1.5em 1.5em 0em 0em;
+        height: 11em;
+        border-radius: 1em 1em 0em 0em;
         object-fit: cover;
     }
     &--info{
         justify-content: space-between;
         background-color: $white;
-        border-radius: 0em 0em 1.5em 1.5em;
+        border-radius: 0em 0em 1em 1em;
     }
     &--name{
         flex-direction: column;
@@ -101,5 +101,5 @@
     }
 }
 .fa-heart {
-    padding: 0.8em;
+    padding: 0.6em;
 }
