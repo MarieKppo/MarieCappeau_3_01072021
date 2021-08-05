@@ -1,5 +1,5 @@
 @mixin shadow($color: $shadowco){
-    box-shadow: 0px 2px 5px $color;
+    box-shadow: 0px 1px 8px $color;
 }
 @mixin grid {
     display: grid;
