@@ -4,9 +4,6 @@
     align-items: center;
     padding: 15px 0px 5px 0px;
     @include shadow;
-    .fa-arrow-left {
-        display: none;
-    }
 }
 img.logo {
     width: 10em;
