@@ -244,14 +244,10 @@ ul li {
   justify-content: space-between;
   background-color: #ffffff;
   border-radius: 0em 0em 1em 1em;
+  padding: 1em;
 }
 .menuCard--name {
   flex-direction: column;
-  padding: 0.8em;
-}
-
-.fa-heart {
-  padding: 0.6em;
 }
 
 .header .fa-arrow-left {
@@ -281,14 +277,14 @@ ul li {
 .menuContainer--title {
   justify-content: space-between;
   align-items: center;
-  padding: 2em;
+  margin: 1.5em;
+  /*.fa-heart {
+      padding: 0em 1em;
+  }*/
 }
 .menuContainer--title h1 {
   font-family: Shrikhand;
   margin: 0em;
-}
-.menuContainer--title .fa-heart {
-  padding: 0em 1em;
 }
 .menuContainer button {
   width: 13em;
@@ -297,7 +293,7 @@ ul li {
 
 .dish {
   flex-direction: column;
-  padding: 1em 2em;
+  margin: 1em 0.5em;
 }
 .dish h2 {
   font-size: 1em;

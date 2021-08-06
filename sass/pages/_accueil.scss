@@ -99,12 +99,9 @@
         justify-content: space-between;
         background-color: $white;
         border-radius: 0em 0em 1em 1em;
+        padding: 1em;
     }
     &--name{
         flex-direction: column;
-        padding: 0.8em;
     }
-}
-.fa-heart {
-    padding: 0.6em;
 }
