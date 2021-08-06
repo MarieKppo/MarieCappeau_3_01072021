@@ -92,6 +92,12 @@ footer {
   padding: 0em 2em 2em 1.5em;
   justify-content: flex-start;
 }
+@media (min-width: 1024px) {
+  .footer {
+    width: 80%;
+    margin: auto;
+  }
+}
 
 ul {
   margin: 0em;
@@ -163,13 +169,26 @@ ul li {
 #operationMode {
   margin: 1.5em;
 }
+@media (min-width: 1024px) {
+  #operationMode {
+    width: 80%;
+    margin: auto;
+  }
+}
 
 .opeGrid {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
   grid-row-gap: 2em;
   grid-template-rows: repeat(3, 1fr);
   margin: 1em;
+}
+@media (min-width: 1024px) {
+  .opeGrid {
+    grid-column-gap: 2em;
+    grid-template-columns: repeat(3, 1fr);
+    grid-template-rows: 1fr;
+  }
 }
 
 .opeCard {
@@ -183,13 +202,14 @@ ul li {
 .opeCard--order {
   align-items: center;
   justify-content: center;
+  font-size: 0.9em;
   width: 1.5em;
   height: 1.5em;
   color: #ffffff;
   background-color: #9356DC;
   border-radius: 50%;
-  position: absolute;
-  left: 1.6em;
+  position: relative;
+  left: -1.4em;
 }
 .opeCard .fas {
   color: grey;
@@ -213,12 +233,26 @@ ul li {
   flex-direction: column;
   margin: 0em 1.5em;
 }
+@media (min-width: 1024px) {
+  .restoContainer {
+    width: 80%;
+    margin: auto;
+  }
+}
 
 .menuGrid {
   display: grid;
-  grid-template-columns: 100%;
+  grid-template-columns: 1fr;
+  grid-template-rows: repeat(4, 1fr);
   grid-row-gap: 2em;
   grid-template-rows: repeat(4, 1fr);
+}
+@media (min-width: 750px) {
+  .menuGrid {
+    grid-template-columns: 1fr 1fr;
+    grid-template-rows: repeat(2, 1fr);
+    grid-gap: 2em;
+  }
 }
 
 .menuLink {
