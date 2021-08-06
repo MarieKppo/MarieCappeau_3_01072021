@@ -8,13 +8,15 @@
     flex-direction: column;
     background-color: $background;
     border-radius: 3em 3em 0em 0em;
+    width: 100%;
+    margin: auto;
     /*position: absolute;
     top: 17em;*/
     &--title {
         justify-content: space-between;
         align-items: center;
         padding: 2em;
-        h2 {
+        h1 {
             font-family: Shrikhand;
             margin: 0em;
         }
@@ -22,4 +24,44 @@
             padding: 0em 1em;
         }
     }
+    button {
+        width: 13em;
+        align-self: center;
+    }
+}
+.dish{
+    flex-direction: column;
+    padding: 1em 2em;
+    h2 {
+        font-size: 1em;
+        text-transform : uppercase;
+        font-weight: 300;
+        margin-inline-start: 5px;
+        padding-bottom: 0.5em;
+        border-bottom: solid 0.2em $tertiary-color;
+    }
+}
+.dishOption{
+    flex-direction: row;
+    justify-content:space-between;
+    align-items: flex-end;
+    background-color: $white;
+    padding: 0.7em;
+    margin-bottom: 1em;
+    @include lightRadius;
+    @include shadow;
+    &--name{
+        display: block;
+        
+    }
+    p {
+            font-size: 0.95em;
+    }
+    .price {
+        font-weight: 600;
+    }
+
+}
+.checked {
+    display: none;
 }

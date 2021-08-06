@@ -10,3 +10,6 @@
     grid-template-columns: 100%;
     grid-row-gap: 2em;
 }
+@mixin lightRadius {
+    border-radius: 1em;
+}

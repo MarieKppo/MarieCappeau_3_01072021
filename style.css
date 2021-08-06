@@ -1,6 +1,7 @@
 @charset "UTF-8";
 /*gris foncé*/
 /*gris clair*/
+/*ombre portée boutons et cartes*/
 body {
   font-size: 16px;
   font-family: Roboto;
@@ -69,6 +70,7 @@ ul {
   padding: 0em;
 }
 
+/*dégradé boutons et coeurs*/
 .header {
   display: flex;
   justify-content: center;
@@ -107,6 +109,7 @@ ul li {
   padding: 0em 0.5em 0em 0em;
 }
 
+/*bouton unique sur chaque page*/
 .btnPrincipal {
   color: #ffffff;
   font: 500 1em Roboto;
@@ -261,6 +264,8 @@ ul li {
   flex-direction: column;
   background-color: rgba(0, 0, 0, 0.03);
   border-radius: 3em 3em 0em 0em;
+  width: 100%;
+  margin: auto;
   /*position: absolute;
   top: 17em;*/
 }
@@ -269,12 +274,53 @@ ul li {
   align-items: center;
   padding: 2em;
 }
-.menuContainer--title h2 {
+.menuContainer--title h1 {
   font-family: Shrikhand;
   margin: 0em;
 }
 .menuContainer--title .fa-heart {
   padding: 0em 1em;
+}
+.menuContainer button {
+  width: 13em;
+  align-self: center;
+}
+
+.dish {
+  flex-direction: column;
+  padding: 1em 2em;
+}
+.dish h2 {
+  font-size: 1em;
+  text-transform: uppercase;
+  font-weight: 300;
+  margin-inline-start: 5px;
+  padding-bottom: 0.5em;
+  border-bottom: solid 0.2em #99E2D0;
+}
+
+.dishOption {
+  flex-direction: row;
+  justify-content: space-between;
+  align-items: flex-end;
+  background-color: #ffffff;
+  padding: 0.7em;
+  margin-bottom: 1em;
+  border-radius: 1em;
+  box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+}
+.dishOption--name {
+  display: block;
+}
+.dishOption p {
+  font-size: 0.95em;
+}
+.dishOption .price {
+  font-weight: 600;
+}
+
+.checked {
+  display: none;
 }
 
 /*# sourceMappingURL=style.css.map */
