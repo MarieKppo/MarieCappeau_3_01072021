@@ -7,7 +7,7 @@
 .geoloc {
     justify-content: center;
     align-items: center;
-    background-color: darken($color:$background, $amount: 0.4);
+    background-color: darken($background, 4);
     p {
         font-weight: 600;
         font-size: 1em;
