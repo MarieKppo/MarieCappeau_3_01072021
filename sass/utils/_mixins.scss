@@ -16,6 +16,18 @@
         grid-gap: 2em;
     }  
 }
+@mixin grid1to3 {
+    display: grid;
+    grid-template-columns: 1fr;
+    grid-row-gap: 2em;
+    grid-template-rows: repeat(3, 1fr);
+    margin: 1em;
+    @media (min-width: 1024px) {
+        grid-column-gap: 0.5em;
+        grid-template-columns: repeat(3,1fr);
+        grid-template-rows: 1fr;
+    }
+}
 @mixin lightRadius {
     border-radius: 1em;
 }

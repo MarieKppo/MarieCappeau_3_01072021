@@ -17,7 +17,7 @@
     flex-direction: column;
     justify-content: space-around;
     align-items: center;
-    margin: 2em 2em;
+    padding: 2em 2em;
     h1 {
         text-align: center;
     }
@@ -27,20 +27,12 @@
     }
 }
 #operationMode {
-    margin: 1.5em;
+    padding: 1.5em;
     @include desktopScreen;
+    background-color: $white;
 }
 .opeGrid {
-    display: grid;
-    grid-template-columns: 1fr;
-    grid-row-gap: 2em;
-    grid-template-rows: repeat(3, 1fr);
-    margin: 1em;
-    @media (min-width: 1024px) {
-        grid-column-gap: 2em;
-        grid-template-columns: repeat(3,1fr);
-        grid-template-rows: 1fr;
-    }
+    @include grid1to3;
 }
 .opeCard {
     align-items: center;
@@ -81,7 +73,10 @@
 .restoContainer {
     flex-direction: column;
     margin: 0em 1.5em;
-    @include desktopScreen
+    @include desktopScreen;
+    h2 {
+        margin-block-end: 1em;
+    }
 }
 .menuGrid {
     @include grid;
