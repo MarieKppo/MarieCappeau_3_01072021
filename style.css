@@ -128,10 +128,6 @@ ul li {
   background-color: linear-gradient(to bottom right, #FF79DA, #9356DC);
 }
 
-.header .fa-arrow-left {
-  display: none;
-}
-
 #exploration {
   background-color: rgba(0, 0, 0, 0.03);
 }
