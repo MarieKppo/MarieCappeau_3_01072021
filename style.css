@@ -188,7 +188,7 @@ ul li {
 }
 @media (min-width: 1024px) {
   .opeGrid {
-    grid-column-gap: 0.5em;
+    grid-column-gap: 2em;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
@@ -201,6 +201,7 @@ ul li {
   border: 1px solid #eee;
   border-radius: 1em;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+  position: relative;
 }
 .opeCard--order {
   align-items: center;
@@ -211,8 +212,8 @@ ul li {
   color: #ffffff;
   background-color: #9356DC;
   border-radius: 50%;
-  position: relative;
-  left: -1.4em;
+  position: absolute;
+  left: -0.7em;
 }
 .opeCard .fas {
   color: grey;
@@ -347,7 +348,7 @@ ul li {
 }
 @media (min-width: 1024px) {
   .dishGrid {
-    grid-column-gap: 0.5em;
+    grid-column-gap: 2em;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: 1fr;
   }
