@@ -130,14 +130,47 @@ ul li {
 .fa-heart {
   font-size: 1.6em;
   font-weight: 300;
-  transition-property: background-color, color;
-  transition-duration: 500ms;
-}
-.fa-heart:hover {
-  color: #ff79da;
-  background-color: linear-gradient(to bottom right, #ff79da, #9356dc);
+  padding: 0em;
+  position: absolute;
+  right: 0.7em;
 }
 
+.fas.fa-heart {
+  z-index: 2;
+  opacity: 0;
+  color: #ff79da;
+}
+.fas.fa-heart:hover {
+  animation: heartColored 500ms forwards;
+}
+
+.far.fa-heart {
+  color: black;
+  z-index: 1;
+}
+.far.fa-heart:hover {
+  opacity: 0;
+}
+
+/*@keyframes heartBorder {
+    0% {
+        z-index: 1;
+    }
+    100% {
+        z-index: -1;
+    }
+}*/
+@keyframes heartColored {
+  0% {
+    opacity: 0;
+  }
+  50% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 1;
+  }
+}
 #exploration {
   background-color: #eee;
 }
@@ -217,7 +250,7 @@ ul li {
   position: absolute;
   left: -0.7em;
 }
-.opeCard .fas {
+.opeCard > .fas {
   color: grey;
   font-size: 1.2em;
   font-weight: 800;
@@ -284,6 +317,7 @@ ul li {
   background-color: #ffffff;
   border-radius: 0em 0em 1em 1em;
   padding: 1em;
+  position: relative;
 }
 .menuCard--name {
   flex-direction: column;
