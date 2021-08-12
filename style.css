@@ -399,8 +399,16 @@ ul li {
   text-transform: uppercase;
   font-weight: 300;
   margin-inline-start: 5px;
-  padding-bottom: 0.5em;
-  border-bottom: solid 0.2em #99e2d0;
+  position: relative;
+}
+.dish h2::after {
+  content: "";
+  position: absolute;
+  left: 0em;
+  top: 1.5em;
+  background-color: #99e2d0;
+  height: 0.2em;
+  width: 3em;
 }
 
 .dishOption {
