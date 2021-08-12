@@ -9,4 +9,9 @@
     border-radius: 20em;
     cursor: pointer;
     @include shadow;
+    transition: opacity 800ms, box-shadow 800ms;
+    &:hover{
+        opacity: 0.8;
+        @include shadow($darkShadowco);
+    }
 }

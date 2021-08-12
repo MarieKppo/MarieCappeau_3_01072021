@@ -4,6 +4,7 @@
 /*dégradé boutons et coeurs*/
 @mixin linearGradiant {
     background-image: linear-gradient(to bottom right,$secondary-color, $primary-color);
+    opacity: 1;
 }
 @mixin grid {
     display: grid;
