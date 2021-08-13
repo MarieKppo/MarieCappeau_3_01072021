@@ -61,12 +61,6 @@ main {
         }
     }    
 }
-.fa-check-circle{
-    padding: 0em;
-}
-.checked {
-    /*display: none;*/
-}
 .dishOption{
     flex-direction: row;
     justify-content:space-between;
@@ -88,27 +82,36 @@ main {
         padding: 0.7em;
     }
     .checked {
-            display: flex;
-            align-items: center;
-            justify-content: center;
-            position: absolute;
-            border-radius: 0em 0.7em 0.7em 0em;
-            /*margin: 0em -5em 0em 0em;*/
-            right: 0em;
-            height: 64px;
-            width: 64px;
-            background-color: $tertiary-color;
-            color: $white;
-            font-size: 1.5em;
-            transform: scale(0);
-            transform-origin: right;
-            transition: transform 700ms ease-in-out;
-        }
-    &:hover > .checked {
-        cursor: pointer;
-        transform: scale(1);
-        margin: 0em 0em 0em 0em;
-
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        border-radius: 0em 0.7em 0.7em 0em;
+        /*margin: 0em -5em 0em 0em;*/
+        right: 0em;
+        height: 64px;
+        width: 0px;
+        background-color: $tertiary-color;
+        color: $white;
+        font-size: 1.5em;
     }
-    
+    .fa-check-circle {
+        overflow: hidden;
+        padding: 0em;
+        
+    }
+    &:hover {
+        cursor: pointer;
+        &> .checked {
+        animation: cochePlat 750ms 90ms ease-in-out forwards 1 alternate;
+        }
+    }
+}
+@keyframes cochePlat {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 64px;
+    }
 }

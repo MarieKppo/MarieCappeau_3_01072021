@@ -412,14 +412,6 @@ ul li {
   width: 3em;
 }
 
-.fa-check-circle {
-  padding: 0em;
-}
-
-.checked {
-  /*display: none;*/
-}
-
 .dishOption {
   flex-direction: row;
   justify-content: space-between;
@@ -450,18 +442,29 @@ ul li {
   /*margin: 0em -5em 0em 0em;*/
   right: 0em;
   height: 64px;
-  width: 64px;
+  width: 0px;
   background-color: #99e2d0;
   color: #ffffff;
   font-size: 1.5em;
-  transform: scale(0);
-  transform-origin: right;
-  transition: transform 700ms ease-in-out;
+}
+.dishOption .fa-check-circle {
+  overflow: hidden;
+  padding: 0em;
+}
+.dishOption:hover {
+  cursor: pointer;
 }
 .dishOption:hover > .checked {
-  cursor: pointer;
-  transform: scale(1);
-  margin: 0em 0em 0em 0em;
+  animation: cochePlat 750ms 90ms ease-in-out forwards 1 alternate;
+}
+
+@keyframes cochePlat {
+  0% {
+    width: 0px;
+  }
+  100% {
+    width: 64px;
+  }
 }
 
 /*# sourceMappingURL=style.css.map */
