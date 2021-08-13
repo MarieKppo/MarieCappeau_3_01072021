@@ -425,6 +425,9 @@ ul li {
 .dishOption--name {
   display: block;
   padding: 0.7em;
+  /*overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;*/
 }
 .dishOption p {
   font-size: 0.95em;
@@ -439,7 +442,6 @@ ul li {
   justify-content: center;
   position: absolute;
   border-radius: 0em 0.7em 0.7em 0em;
-  /*margin: 0em -5em 0em 0em;*/
   right: 0em;
   height: 64px;
   width: 0px;
@@ -450,20 +452,36 @@ ul li {
 .dishOption .fa-check-circle {
   overflow: hidden;
   padding: 0em;
+  transform: rotate(0deg);
+  transition: transform 750ms 300ms ease-in-out;
 }
 .dishOption:hover {
   cursor: pointer;
 }
 .dishOption:hover > .checked {
-  animation: cochePlat 750ms 90ms ease-in-out forwards 1 alternate;
+  animation: slideInCheck 750ms 90ms ease-in-out both alternate;
+}
+.dishOption:hover > .price {
+  animation: slideInPrice 750ms 90ms ease-in-out forwards;
+}
+.dishOption:hover .fa-check-circle {
+  transform: rotate(360deg);
 }
 
-@keyframes cochePlat {
+@keyframes slideInCheck {
   0% {
     width: 0px;
   }
   100% {
     width: 64px;
+  }
+}
+@keyframes slideInPrice {
+  0% {
+    margin-right: 0px;
+  }
+  100% {
+    margin-right: 64px;
   }
 }
 
