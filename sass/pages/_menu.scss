@@ -73,9 +73,11 @@ main {
     &--name{
         display: block;
         padding: 0.7em;
-        /*overflow: hidden;
+        width: 70%;
+        /*je ne suis pas du tout satisfaite de çaaaaaa*/
         white-space: nowrap;
-        text-overflow: ellipsis;*/
+        text-overflow: ellipsis;
+        overflow: hidden;
     }
     p {
         font-size: 0.95em;
@@ -102,7 +104,6 @@ main {
         padding: 0em;
         transform: rotate(0deg);
         transition: transform 750ms 300ms ease-in-out;
-   
     }
     &:hover {
         cursor: pointer;
