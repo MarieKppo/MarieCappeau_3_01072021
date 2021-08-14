@@ -88,6 +88,9 @@
     margin:0em;
     width: 100%;
     @include shadow;
+    &:hover{
+        @include shadow($darkShadowco);
+    }
 }
 .menuCard{
     flex-direction: column;
