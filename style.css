@@ -133,50 +133,86 @@ ul li {
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.8);
 }
 
-.fa-heart {
-  font-size: 1.6em;
-  font-weight: 300;
+.like-btn {
+  display: flex;
+  cursor: pointer;
+  width: 2.5em;
+  height: 2.5em;
   padding: 0em;
+  border: none;
+  background-color: transparent;
+}
+.like-btn .fa-heart {
+  font-size: 2em;
   position: absolute;
-  right: 0.8em;
+  transition: opacity 500ms ease-in-out;
 }
-
-.fas.fa-heart {
-  z-index: 2;
+.like-btn .fas {
   opacity: 0;
-  color: #ff79da;
+  background: -webkit-linear-gradient(top, #9356dc 0%, #ff79da 100%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
 }
-.fas.fa-heart:hover {
-  animation: heartColored 500ms forwards;
+.like-btn:hover .fas {
+  opacity: 1;
 }
-
-.far.fa-heart {
-  color: black;
-  z-index: 1;
-}
-.far.fa-heart:hover {
+.like-btn:hover .far {
   opacity: 0;
 }
 
-/*@keyframes heartBorder {
+/*@keyframes likeAnim {
     0% {
-        z-index: 1;
+        opacity: 0
     }
     100% {
-        z-index: -1;
+        opacity: 1;
+        color: black;
+    }
+}
+/* version sans bouton ! :-0
+
+.fa-heart{
+    font-size: 1.6em;
+    font-weight: 300;
+    padding: 0em;
+    position: absolute;
+    right: 0.8em;
+}
+
+.fas.fa-heart{
+    z-index: 2;
+    opacity: 0;
+    color: $secondary-color;
+    &:hover{
+        animation: heartColored 500ms forwards;
+    }
+}
+.far.fa-heart{
+    color: black;
+    z-index: 1;
+    &:hover {
+        opacity: 0;
+    }
+}
+@keyframes heartBorder {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes heartColored {
+    0% {
+       opacity: 0; 
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
     }
 }*/
-@keyframes heartColored {
-  0% {
-    opacity: 0;
-  }
-  50% {
-    opacity: 0.5;
-  }
-  100% {
-    opacity: 1;
-  }
-}
 #exploration {
   background-color: #eee;
 }
@@ -350,7 +386,7 @@ ul li {
   top: -4em;
 }
 .menuContainer--title {
-  position: relative;
+  justify-content: space-between;
   align-items: center;
   margin: 1.5em 1.5em 0.5em 1.5em;
 }
@@ -359,7 +395,7 @@ ul li {
   font-weight: 400;
   margin: 0em;
 }
-.menuContainer button {
+.menuContainer .btnPrincipal {
   width: 13em;
   align-self: center;
 }
