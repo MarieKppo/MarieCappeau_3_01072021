@@ -70,19 +70,21 @@ main {
     margin-top: 1em;
     @include lightRadius;
     @include shadow;
+    transition: all 2s;
     &--name{
-        display: block;
+        display:inline-block;
         padding: 0.7em;
         max-width: 250px;
-        /*je ne suis pas du tout satisfaite de çaaaaaa*/
+        min-width: 0;
+    }
+    & h3, p {
         white-space: nowrap;
-        text-overflow: ellipsis;
         overflow: hidden;
-    }
-    p {
-        font-size: 0.95em;
-    }
+        text-overflow: ellipsis;
+        
+    } 
     .price {
+        font-size: 0.95em;
         font-weight: 600;
         padding: 0.7em;
     }
