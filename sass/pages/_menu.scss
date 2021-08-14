@@ -1,8 +1,11 @@
 .topImg {
     width: 100%;
-    height: 15em;
+    height: 250px;
     object-fit: cover;
     position: relative;
+    @media (min-width: 1024px) {
+        height: 350px;
+    }
 }
 main {
     @media (max-width:35em){
@@ -71,17 +74,22 @@ main {
     @include lightRadius;
     @include shadow;
     transition: all 2s;
+    opacity: 0;
+    @for $i from 1 through 10 {
+        &-#{$i} {
+            animation: magicDish 1000ms ease-in-out 200ms*$i forwards;
+        }
+    }
     &--name{
         display:inline-block;
         padding: 0.7em;
-        max-width: 250px;
+        max-width: 300px;
         min-width: 0;
     }
     & h3, p {
         white-space: nowrap;
         overflow: hidden;
         text-overflow: ellipsis;
-        
     } 
     .price {
         font-size: 0.95em;
@@ -118,6 +126,14 @@ main {
         .fa-check-circle {
             transform: rotate(360deg);
         }
+    }
+}
+@keyframes magicDish {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
     }
 }
 @keyframes slideInCheck {
