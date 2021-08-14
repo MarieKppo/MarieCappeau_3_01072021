@@ -73,7 +73,7 @@ main {
     &--name{
         display: block;
         padding: 0.7em;
-        width: 70%;
+        max-width: 250px;
         /*je ne suis pas du tout satisfaite de çaaaaaa*/
         white-space: nowrap;
         text-overflow: ellipsis;
