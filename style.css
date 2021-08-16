@@ -360,6 +360,7 @@ ul a:hover {
 
 .menuCard {
   flex-direction: column;
+  position: relative;
 }
 .menuCard--pic {
   height: 11em;
@@ -375,6 +376,16 @@ ul a:hover {
 }
 .menuCard--name {
   flex-direction: column;
+}
+.menuCard .newLabel {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  border-radius: 0.2em;
+  font-weight: 600;
+  color: #32b091;
+  background-color: #99e2d0;
+  padding: 0.5em 1em;
 }
 
 .topImg {

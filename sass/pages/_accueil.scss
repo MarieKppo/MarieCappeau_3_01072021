@@ -94,6 +94,7 @@
 }
 .menuCard{
     flex-direction: column;
+    position: relative;
     &--pic {
         height: 11em;
         border-radius: 1em 1em 0em 0em;
@@ -108,5 +109,15 @@
     }
     &--name{
         flex-direction: column;
+    }
+    .newLabel {
+        position: absolute;
+        top: 10px;
+        right: 10px;
+        border-radius: 0.2em;
+        font-weight: 600;
+        color: darken($tertiary-color, 30%);
+        background-color: $tertiary-color;
+        padding: 0.5em 1em;
     }
 }
