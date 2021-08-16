@@ -21,7 +21,7 @@
     100%{
         opacity: 0;
         z-index: -10;    
-}
+    }
 }
 .loadSpin {
     position: fixed;
@@ -53,8 +53,6 @@
         animation: spinner2 1000ms linear normal infinite ;
     }
 }    
-
-
 #exploration {
     background-color:$background;
 }
