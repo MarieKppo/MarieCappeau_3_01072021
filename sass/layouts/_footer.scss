@@ -13,6 +13,12 @@ ul {
         font-size: 1em;
         color: $white;
     }
+    a {
+        color: $white;
+    }
+    a:hover {
+        color: $background;
+    }
 }
 .fas {
     padding: 0em 0.5em 0em 0em;

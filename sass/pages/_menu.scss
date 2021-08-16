@@ -75,6 +75,7 @@ main {
     @include shadow;
     transition: all 2s;
     opacity: 0;
+    overflow: hidden;
     @for $i from 1 through 10 {
         &-#{$i} {
             animation: magicDish 1000ms ease-in-out 200ms*$i forwards;
@@ -103,7 +104,7 @@ main {
         position: absolute;
         border-radius: 0em 0.7em 0.7em 0em;
         right: 0em;
-        height: 64px;
+        height: 100%;
         width: 0px;
         background-color: $tertiary-color;
         color: $white;

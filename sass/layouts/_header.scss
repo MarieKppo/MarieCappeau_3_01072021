@@ -5,6 +5,7 @@
     align-items: center;
     padding: 15px 0px 5px 0px;
     @include shadow;
+    z-index: 1;
 }
 .fa-arrow-left {
     display: flex;

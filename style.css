@@ -6,6 +6,8 @@ body {
   font-size: 16px;
   font-family: Roboto;
   margin: 0px;
+  display: flex;
+  flex-direction: column;
 }
 
 .container {
@@ -15,7 +17,7 @@ body {
   flex-direction: column;
 }
 
-div {
+div, article {
   display: flex;
 }
 
@@ -77,6 +79,7 @@ ul {
   align-items: center;
   padding: 15px 0px 5px 0px;
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
+  z-index: 1;
 }
 
 .fa-arrow-left {
@@ -108,6 +111,12 @@ ul li {
   padding-bottom: 0.4em;
   font-size: 1em;
   color: #ffffff;
+}
+ul a {
+  color: #ffffff;
+}
+ul a:hover {
+  color: #eee;
 }
 
 .fas {
@@ -467,6 +476,7 @@ ul li {
   box-shadow: 0px 1px 8px rgba(0, 0, 0, 0.1);
   transition: all 2s;
   opacity: 0;
+  overflow: hidden;
 }
 .dishOption-1 {
   animation: magicDish 1000ms ease-in-out 200ms forwards;
@@ -521,7 +531,7 @@ ul li {
   position: absolute;
   border-radius: 0em 0.7em 0.7em 0em;
   right: 0em;
-  height: 64px;
+  height: 100%;
   width: 0px;
   background-color: #99e2d0;
   color: #ffffff;
