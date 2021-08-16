@@ -534,6 +534,8 @@ ul a:hover {
   font-size: 0.95em;
   font-weight: 600;
   padding: 0.7em;
+  overflow: initial;
+  animation: slideOutPrice 750ms 0ms;
 }
 .dishOption .checked {
   display: flex;
@@ -547,6 +549,7 @@ ul a:hover {
   background-color: #99e2d0;
   color: #ffffff;
   font-size: 1.5em;
+  animation: slideOutCheck 750ms 0ms;
 }
 .dishOption .fa-check-circle {
   overflow: hidden;
@@ -558,7 +561,7 @@ ul a:hover {
   cursor: pointer;
 }
 .dishOption:hover > .checked {
-  animation: slideInCheck 750ms 90ms ease-in-out both alternate;
+  animation: slideInCheck 750ms 90ms ease-in-out forwards;
 }
 .dishOption:hover > .price {
   animation: slideInPrice 750ms 90ms ease-in-out forwards;
@@ -575,12 +578,28 @@ ul a:hover {
     opacity: 1;
   }
 }
+@keyframes slideOutCheck {
+  0% {
+    width: 64px;
+  }
+  100% {
+    width: 0px;
+  }
+}
 @keyframes slideInCheck {
   0% {
     width: 0px;
   }
   100% {
     width: 64px;
+  }
+}
+@keyframes slideOutPrice {
+  0% {
+    margin-right: 64px;
+  }
+  100% {
+    margin-right: 0px;
   }
 }
 @keyframes slideInPrice {
