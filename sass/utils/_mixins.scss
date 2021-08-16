@@ -1,3 +1,8 @@
+@mixin spinForm {
+    border-radius: 50%;
+        position: absolute;
+        top: 45%;
+}
 @mixin shadow($color: $shadowco){
     box-shadow: 0px 1px 8px $color;
 }

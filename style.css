@@ -222,6 +222,66 @@ ul a:hover {
         opacity: 1;
     }
 }*/
+@keyframes spinner1 {
+  0% {
+    opacity: 0.5;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+@keyframes spinner2 {
+  0% {
+    transform: rotate(0deg);
+  }
+  100% {
+    transform: rotate(360deg);
+  }
+}
+@keyframes load {
+  0% {
+    opacity: 1;
+  }
+  100% {
+    opacity: 0;
+  }
+}
+.loadSpin {
+  position: fixed;
+  left: 0;
+  top: 0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  width: 100%;
+  height: 100%;
+  z-index: 1000;
+  background-color: #eee;
+  opacity: 1;
+  animation: load 3s linear forwards;
+}
+.loadSpin .spin {
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  background-image: linear-gradient(to bottom right, #ff79da, #9356dc);
+  opacity: 1;
+  opacity: 0.5;
+  height: 55px;
+  width: 55px;
+  animation: spinner1 2000ms linear alternate infinite;
+}
+.loadSpin .spin2 {
+  border-radius: 50%;
+  position: absolute;
+  top: 45%;
+  border: dashed 5px transparent;
+  border-bottom: dashed 5px #9356dc;
+  height: 45px;
+  width: 45px;
+  animation: spinner2 1000ms linear normal infinite;
+}
+
 #exploration {
   background-color: #eee;
 }
