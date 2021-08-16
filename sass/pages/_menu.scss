@@ -1,8 +1,11 @@
 .topImg {
     width: 100%;
-    height: 15em;
+    height: 250px;
     object-fit: cover;
     position: relative;
+    @media (min-width: 1024px) {
+        height: 350px;
+    }
 }
 main {
     @media (max-width:35em){
@@ -24,11 +27,8 @@ main {
             font-weight: 400;
             margin: 0em;
         }
-        @media (min-width:1024px){
-            justify-content: space-evenly;
-        }
     }
-    button {
+    .btnPrincipal {
         width: 13em;
         align-self: center;
     }
@@ -52,30 +52,123 @@ main {
         text-transform : uppercase;
         font-weight: 300;
         margin-inline-start: 5px;
-        padding-bottom: 0.5em;
-        border-bottom: solid 0.2em $tertiary-color;
-    }
+        position: relative;
+        &::after {
+            content: "";
+            position: absolute;
+            left: 0em;
+            top: 1.5em;
+            background-color: $tertiary-color;
+            height: 0.2em;
+            width: 3em;
+        }
+    }    
 }
 .dishOption{
     flex-direction: row;
     justify-content:space-between;
     align-items: flex-end;
+    position: relative;
     background-color: $white;
-    padding: 0.7em;
     margin-top: 1em;
     @include lightRadius;
     @include shadow;
+    transition: all 2s;
+    opacity: 0;
+    overflow: hidden;
+    @for $i from 1 through 10 {
+        &-#{$i} {
+            animation: magicDish 1000ms ease-in-out 200ms*$i forwards;
+        }
+    }
     &--name{
-        display: block;
-        
+        display:inline-block;
+        padding: 0.7em;
+        max-width: 300px;
+        min-width: 0;
     }
-    p {
-            font-size: 0.95em;
-    }
+    & h3, p {
+        white-space: nowrap;
+        overflow: hidden;
+        text-overflow: ellipsis;
+    } 
     .price {
+        font-size: 0.95em;
         font-weight: 600;
+        padding: 0.7em;
+        overflow: initial;
+        animation: slideOutPrice 750ms 0ms;
+    }
+    .checked {
+        display: flex;
+        align-items: center;
+        justify-content: center;
+        position: absolute;
+        border-radius: 0em 0.7em 0.7em 0em;
+        right: 0em;
+        height: 100%;
+        width: 0px;
+        background-color: $tertiary-color;
+        color: $white;
+        font-size: 1.5em;
+        animation: slideOutCheck 750ms 0ms;
+    }
+    .fa-check-circle {
+        overflow: hidden;
+        padding: 0em;
+        transform: rotate(0deg);
+        transition: transform 750ms 300ms ease-in-out;
+    }
+    &:hover {
+        cursor: pointer;
+        &> .checked {
+            animation: slideInCheck 750ms 90ms ease-in-out forwards;
+        }
+        &> .price {
+            animation: slideInPrice 750ms 90ms ease-in-out forwards;
+        }
+        .fa-check-circle {
+            transform: rotate(360deg);
+        }
     }
 }
-.checked {
-    display: none;
+@keyframes magicDish {
+    0% {
+        opacity: 0;
+    }
+    100%{
+        opacity: 1;
+    }
+}
+@keyframes slideOutCheck {
+    0% {
+        width: 64px;
+    }
+    100%{
+        width: 0px;
+    }
+}
+@keyframes slideInCheck {
+    0%{
+        width: 0px;
+    }
+    100%{
+        width: 64px;
+    }
+}
+@keyframes slideOutPrice {
+    0%{
+        margin-right: 64px;
+    }
+    100% {
+        margin-right: 0px;
+    }
+}
+@keyframes slideInPrice {
+    0%{
+        margin-right: 0px;
+    }
+    100%{
+        margin-right: 64px;
+    }
 }

@@ -1,8 +1,81 @@
-.fa-heart{
-    color: black;
-    font-size: 1.6em;
-    font-weight: 300;
-    &:hover{
-        background-color: linear-gradient(to bottom right,$secondary-color, $primary-color);
+.like-btn {
+    display: flex;
+    cursor: pointer;
+    width: 2.5em;
+    height: 2.5em;
+    padding: 0em;
+    border: none;
+    background-color: transparent;
+    .fa-heart {
+        font-size: 2em;
+        position: absolute;
+        transition: opacity  500ms ease-in-out;
+    }
+    .fas {
+        opacity: 0;
+        background: -webkit-linear-gradient(top, $primary-color 0%,$secondary-color 100%); 
+        -webkit-background-clip: text;
+        -webkit-text-fill-color:transparent;
+    }
+    &:hover {
+        .fas {
+            opacity:1;
+        }
+        .far {
+            opacity: 0;
+        }
     }
 }
+/*@keyframes likeAnim {
+    0% {
+        opacity: 0
+    }
+    100% {
+        opacity: 1;
+        color: black;
+    }
+}
+/* version sans bouton ! :-0
+
+.fa-heart{
+    font-size: 1.6em;
+    font-weight: 300;
+    padding: 0em;
+    position: absolute;
+    right: 0.8em;
+}
+
+.fas.fa-heart{
+    z-index: 2;
+    opacity: 0;
+    color: $secondary-color;
+    &:hover{
+        animation: heartColored 500ms forwards;
+    }
+}
+.far.fa-heart{
+    color: black;
+    z-index: 1;
+    &:hover {
+        opacity: 0;
+    }
+}
+@keyframes heartBorder {
+    0% {
+        opacity: 1;
+    }
+    100% {
+        opacity: 0;
+    }
+}
+@keyframes heartColored {
+    0% {
+       opacity: 0; 
+    }
+    50% {
+        opacity: 0.5;
+    }
+    100% {
+        opacity: 1;
+    }
+}*/
