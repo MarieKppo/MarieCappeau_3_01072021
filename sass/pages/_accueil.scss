@@ -56,14 +56,23 @@
 #exploration {
     background-color:$background;
 }
-.fa-map-marker-alt{
-    margin: 1em 0em;
-}
 .geoloc {
     justify-content: center;
     align-items: center;
     background-color: darken($background, 4);
-    p {
+    .fa-map-marker-alt{
+        margin: 0em;
+        padding: 0em;
+    }
+    & form {
+        padding: 1em;
+        display: flex;
+        align-items: center;
+    }
+    &--input {
+        background-color: transparent;
+        border: transparent;
+        padding: 0em 0.5em;
         font-weight: 600;
         font-size: 1em;
     }
