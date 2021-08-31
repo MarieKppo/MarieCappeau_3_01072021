@@ -125,11 +125,14 @@
         font-weight: 800;
         padding: 0em 1em;
     }
-    .fa-store {
-        color: $primary-color;
-    }
     p {
         font: 600 0.9em Roboto;
+    }
+    &:hover {
+        background-color: lighten($primary-color, 35%);
+        .fas {
+            color: $primary-color;
+        }
     }
 }
 #restaurants {
